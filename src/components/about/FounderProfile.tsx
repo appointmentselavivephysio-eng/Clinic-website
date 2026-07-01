@@ -7,12 +7,14 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 // Each credential rendered as its own teal-outlined pill.
 const CREDENTIALS = [
   "BPT",
-  "MPT (Neurology)",
-  "MBA",
+  "MPT(Neurology)",
+  "MHA",
   "MIAFT",
   "MJPN",
   "COMT",
+  "CKT(USA)",
   "CDNT",
+  "CSCIS(Hyderabad)",
 ] as const;
 
 const STATS = [

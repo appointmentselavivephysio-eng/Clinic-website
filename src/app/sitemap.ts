@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next'
+import { BLOG_ARTICLES } from '@/lib/data'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.elavivephysio.com'
 
 const servicesSlugs = ['spine-back', 'knee-joint', 'shoulder', 'sports-injury', 'post-surgical-rehab', 'neuro-rehab']
-const blogSlugs = ['morning-habits-back-pain', 'after-acl-surgery', 'painkillers-not-a-plan', 'return-to-running-after-knee-injury', 'office-chair-posture', 'first-physiotherapy-visit']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['/', '/about', '/services', '/contact', '/blog'].map(route => ({
@@ -20,9 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const blogRoutes = blogSlugs.map(slug => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: new Date(),
+  const blogRoutes = BLOG_ARTICLES.map(article => ({
+    url: `${BASE_URL}/blog/${article.slug}`,
+    lastModified: new Date(article.date),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))

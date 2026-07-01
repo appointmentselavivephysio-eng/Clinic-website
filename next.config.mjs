@@ -29,6 +29,14 @@ const nextConfig = {
           },
         ],
       },
+      // Keep Vercel preview deployments (*.vercel.app) out of search indexes so
+      // only the production domain is crawled. Placed after the security rule so
+      // it never overrides those headers.
+      {
+        source: "/(.*)",
+        has: [{ type: "host", value: "(?:.*\\.)?vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
     ];
   },
 };

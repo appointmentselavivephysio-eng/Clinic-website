@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { VIDEO_SECTION } from "@/lib/data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import BlurText from "./BlurText";
@@ -23,6 +24,39 @@ export default function VideoTestimonials() {
     selector: "[data-reveal]",
     stagger: 0.1,
   });
+
+  // Lazy-load the video source only when a card nears the viewport. Every
+  // <video> ships with preload="none" and its real source in data-src; on
+  // intersection we copy data-src → src (once) and stop observing that element.
+  // This keeps the initial page weight near zero instead of loading the same
+  // clip in all 10 marquee nodes (~43MB) up front.
+  const marqueeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = marqueeRef.current;
+    if (!root) return;
+
+    const videos = Array.from(root.querySelectorAll<HTMLVideoElement>("video[data-src]"));
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const video = entry.target as HTMLVideoElement;
+          const src = video.dataset.src;
+          if (src && !video.src) {
+            video.src = src;
+            video.load();
+          }
+          obs.unobserve(video);
+        });
+      },
+      { rootMargin: "200px" }
+    );
+
+    videos.forEach((video) => observer.observe(video));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
@@ -48,6 +82,7 @@ export default function VideoTestimonials() {
         animation, leaving a static row of cards.
       */}
       <div
+        ref={marqueeRef}
         data-reveal
         className="group/marquee mt-2 w-full overflow-hidden"
         aria-label="Patient recovery videos"
@@ -61,7 +96,8 @@ export default function VideoTestimonials() {
             >
               <figure className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-black shadow-soft">
                 <video
-                  src="/images/video.mp4"
+                  data-src="/images/video.mp4"
+                  preload="none"
                   autoPlay
                   muted
                   loop

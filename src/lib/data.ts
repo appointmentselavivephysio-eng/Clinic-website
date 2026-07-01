@@ -165,7 +165,7 @@ export const PILLARS = [
 // --- DOCTOR / FOUNDER ---------------------------------------------------------
 export const DOCTOR = {
   name: "Dr. Ajay Agarwal (PT)",
-  qualification: "BPT, MPT (Neurology), MBA, MIAFT, MJPN, COMT, CDNT | Founder & Director",
+  qualification: "BPT, MPT(Neurology), MHA, MIAFT, MJPN, COMT, CKT(USA), CDNT, CSCIS(Hyderabad) | Founder & Director",
   bioTeaser:
     "Dr. Ajay Agarwal founded Elavive Physio with a single belief: every patient deserves a recovery plan built around them, not a template. He holds an MPT (Neurology) from Janardan Rai Nagar Rajasthan Vidyapeeth (JRNRVU), Udaipur and an MBA in Hospital and Healthcare Management. With 4+ years of clinical experience, 4,000+ patients treated, and certifications from Johns Hopkins University and Imperial College London, he brings internationally trained expertise to Jaipur.",
   // Real founder portrait (public/images/dr-ajay-agarwal.png).

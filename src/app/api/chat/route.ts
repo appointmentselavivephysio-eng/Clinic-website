@@ -27,7 +27,7 @@ Google Rating: 5.0 stars
 Cashless / TPA facility available
 
 DOCTOR:
-Dr. Ajay Agarwal (PT) — BPT, MPT (Neurology), MBA, COMT, CKT(USA), CDNT
+Dr. Ajay Agarwal (PT) — BPT, MPT(Neurology), MHA, MIAFT, MJPN, COMT, CKT(USA), CDNT, CSCIS(Hyderabad)
 MPT (Neurology) from Janardan Rai Nagar Rajasthan Vidyapeeth (JRNRVU), Udaipur; MBA in Hospital and Healthcare Management
 Founder and Director, Elavive Physio
 4+ years experience, 4000+ patients treated, 40+ cities

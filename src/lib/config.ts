@@ -24,8 +24,10 @@ export const CLINIC_CONFIG = {
     country: "India",
     full: "100, Basement Floor, Milap Nagar, Tonk Road, opposite Rajasthan Jaipuria Hospital, Kailashpuri, Jaipur, Rajasthan 302018",
     googleMapsLink: "https://share.google/ayDx172iCW7QdGIkK",
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.5!2d75.8!3d26.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sElavive+Physio+Spine+and+Knee+Clinic!5e0!3m2!1sen!2sin",
+    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.2!2d75.715409!3d27.629943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sElavive+Physio+Spine+and+Knee+Physiotherapy+Centre!5e0!3m2!1sen!2sin!4v1",
   },
+
+  geo: { lat: "27.629943", lng: "75.715409" },
 
   hours: {
     weekdays: "Monday to Saturday: 9:00 AM to 8:00 PM",
@@ -59,7 +61,7 @@ export const CLINIC_CONFIG = {
     cities: "40+",
     countries: "5+",
     rating: "5.0",
-    ratingCount: "16",
+    ratingCount: "20",
     conditions: "25+",
   },
 

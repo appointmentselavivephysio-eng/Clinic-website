@@ -55,21 +55,11 @@ export default function Hero() {
       {/* Copy overlay. */}
       <div className="pointer-events-none relative z-10 mx-auto flex min-h-[100svh] max-w-content flex-col justify-end px-5 pb-16 pt-28 sm:justify-center sm:px-8 sm:pb-0 lg:pt-24">
         <div className="max-w-xl">
-          {/* Real, crawlable H1. */}
-          <h1 className="sr-only-seo">
-            Elavive Physio, Spine &amp; Knee Clinic in Jaipur. Advanced
-            physiotherapy for spine, knee, sports injuries, and post-surgical
-            recovery.
-          </h1>
-
           <p className="eyebrow pointer-events-auto mb-4">{HERO.eyebrow}</p>
 
-          {/* Visible display headline (aria-hidden so SR users hear the H1 once).
-              Word-by-word blur-up reveal; line 2 chains after line 1's words. */}
-          <p
-            aria-hidden="true"
-            className="font-heading text-4xl font-light leading-[1.05] tracking-tight text-charcoal sm:text-5xl md:text-6xl lg:text-7xl"
-          >
+          {/* Real, crawlable, visible H1. Word-by-word blur-up reveal; line 2
+              chains after line 1's words. */}
+          <h1 className="font-heading text-4xl font-light leading-[1.05] tracking-tight text-charcoal sm:text-5xl md:text-6xl lg:text-7xl">
             <BlurText as="span" text={HERO.headlineLine1} />
             <br />
             <BlurText
@@ -78,6 +68,12 @@ export default function Hero() {
               className="text-teal"
               delay={0.16}
             />
+          </h1>
+
+          {/* Understated SEO subtitle directly under the H1. */}
+          <p className="mt-2 text-sm text-muted">
+            Evidence-based physiotherapy clinic in Jaipur for spine, knee, sports
+            injuries and post-surgical rehabilitation.
           </p>
 
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
