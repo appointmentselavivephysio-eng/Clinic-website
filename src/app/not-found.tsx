@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   },
   description:
     "The page you're looking for doesn't exist or may have moved. Return home or book an appointment with Elavive Physio.",
-  robots: { index: false, follow: true },
+  robots: { index: false, follow: false },
+  // Strip the site-wide canonical inherited from the root layout so a 404 never
+  // canonicalises to the homepage.
+  alternates: { canonical: null },
+  openGraph: {
+    title: "Page Not Found | Elavive Physio",
+    description: "The page you are looking for does not exist.",
+  },
 };
 
 export default function NotFound() {

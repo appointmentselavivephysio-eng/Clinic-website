@@ -41,6 +41,14 @@ export default function ArticleBody({ article }: { article: BlogArticle }) {
 
         return <p key={i}>{block.content}</p>;
       })}
+
+      <aside className="mt-12 rounded-lg border border-charcoal/15 bg-charcoal/[0.03] p-5 text-sm leading-relaxed text-muted">
+        <strong className="font-medium text-charcoal">Medical Disclaimer:</strong>{" "}
+        This article is for informational purposes only and is not a substitute
+        for professional medical advice, diagnosis, or treatment. Always consult
+        a qualified physiotherapist or healthcare provider before starting any
+        exercise or treatment programme.
+      </aside>
     </div>
   );
 }
