@@ -120,6 +120,13 @@ export default function Footer() {
         <div className="mt-12 border-t border-teal/10 pt-6 text-xs text-muted">
           {/* TODO: confirm legal entity name / year. */}
           © {new Date().getFullYear()} Elavive Physio. All rights reserved.
+          <p className="mt-4 text-xs text-muted/70 text-center max-w-2xl mx-auto leading-relaxed">
+            Medical Disclaimer: The information on this website is for general
+            informational purposes only and is not a substitute for professional
+            medical advice, diagnosis, or treatment. Always consult a qualified
+            physiotherapist or healthcare provider before starting any treatment
+            programme.
+          </p>
         </div>
       </div>
     </footer>

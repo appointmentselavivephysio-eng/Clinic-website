@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactBody from "@/components/ContactBody";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.elavivephysio.com" },
+          { name: "Contact", url: "https://www.elavivephysio.com/contact" },
+        ]}
+      />
       <Header />
       <main>
         <ContactBody />

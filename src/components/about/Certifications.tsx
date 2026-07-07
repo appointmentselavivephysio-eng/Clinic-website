@@ -57,23 +57,23 @@ const GROUPS: Group[] = [
     items: [
       {
         name: "Certificate in Community Change in Public Health",
-        org: "Johns Hopkins University",
+        org: "Johns Hopkins University (online certificate)",
       },
       {
         name: "Healthcare Entrepreneurship: Taking Ideas to Market",
-        org: "Imperial College London",
+        org: "Imperial College London (online certificate)",
       },
       {
         name: "Evaluation of Digital Health Interventions",
-        org: "Imperial College London",
+        org: "Imperial College London (online certificate)",
       },
       {
         name: "Social & Technical Context of Health Informatics",
-        org: "Johns Hopkins University",
+        org: "Johns Hopkins University (online certificate)",
       },
       {
         name: "Foundations of Public Health Practice",
-        org: "Imperial College London",
+        org: "Imperial College London (online certificate)",
       },
     ],
   },

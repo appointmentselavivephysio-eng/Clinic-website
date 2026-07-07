@@ -9,6 +9,7 @@ import FounderProfile from "@/components/about/FounderProfile";
 import Certifications from "@/components/about/Certifications";
 import AwardsSection from "@/components/about/AwardsSection";
 import AboutCTA from "@/components/about/AboutCTA";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: { absolute: "About Elavive Physio | Physiotherapist in Jaipur" },
@@ -33,6 +34,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.elavivephysio.com" },
+          { name: "About", url: "https://www.elavivephysio.com/about" },
+        ]}
+      />
       <Header />
       <main>
         <AboutHero />

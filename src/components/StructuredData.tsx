@@ -53,14 +53,14 @@ export default function StructuredData() {
         "opens": "09:00",
         "closes": "20:00",
       },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "20:00",
+        "description": "By prior appointment only",
+      },
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "6",
-      "bestRating": "5",
-      "worstRating": "1",
-    },
     "founder": {
       "@type": "Person",
       "name": "Dr. Ajay Agarwal",

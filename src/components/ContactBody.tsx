@@ -107,6 +107,11 @@ export default function ContactBody() {
                 {CLINIC_CONFIG.address.area}, {CLINIC_CONFIG.address.city},{" "}
                 {CLINIC_CONFIG.address.state} {CLINIC_CONFIG.address.pinCode}
               </p>
+              <p className="text-sm text-muted mt-2 leading-relaxed">
+                Conveniently located on Tonk Road, serving patients from
+                Durgapura, Malviya Nagar, Sanganer, Mansarovar, Pratap Nagar, and
+                across Jaipur.
+              </p>
             </div>
 
             {/* Card 2 — Phone & WhatsApp */}

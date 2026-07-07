@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceDetail from "@/components/ServiceDetail";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { SERVICE_DETAILS } from "@/lib/data";
 
 const detail = SERVICE_DETAILS["sports-injury"];
@@ -26,6 +27,16 @@ export const metadata: Metadata = {
 export default function SportsInjuryPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.elavivephysio.com" },
+          { name: "Services", url: "https://www.elavivephysio.com/services" },
+          {
+            name: detail.name,
+            url: "https://www.elavivephysio.com/services/sports-injury",
+          },
+        ]}
+      />
       <Header />
       <main>
         <ServiceDetail slug="sports-injury" />
