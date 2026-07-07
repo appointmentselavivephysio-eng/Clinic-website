@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CLINIC_CONFIG } from "@/lib/config";
 import {
   Instagram,
@@ -29,9 +30,13 @@ export default function Footer() {
       <div className="container-content px-5 py-14 sm:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <span className="font-heading text-2xl font-medium text-charcoal">
-              Elaviv<span className="text-teal">ephysio</span>
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Elavive Physio"
+              width={120}
+              height={38}
+              className="object-contain mix-blend-multiply dark:mix-blend-normal"
+            />
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
               Jaipur&apos;s leading spine &amp; knee clinic. Evidence-based
               physiotherapy for spine, knee, sports injuries and post-surgical

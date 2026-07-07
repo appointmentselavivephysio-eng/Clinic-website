@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Close, ArrowRight } from "./Icons";
 
 const NAV_LINKS = [
@@ -47,12 +48,16 @@ export default function Header() {
         >
           <Link
             href="/"
-            className="font-heading text-xl font-medium tracking-tight text-charcoal transition-opacity hover:opacity-80"
+            className="bg-transparent transition-opacity hover:opacity-80"
           >
-            {/* TODO: Replace this text logo with <Image> component once logo file is added to public/ */}
-            {/* Expected path: /public/logo.png or /public/logo.svg */}
-            {/* When ready: import Image from 'next/image' and replace the <span> with <Image src="/logo.png" alt="Elavive Physio" width={140} height={40} /> */}
-            Elaviv<span className="text-teal">ephysio</span>
+            <Image
+              src="/logo.png"
+              alt="Elavive Physio"
+              width={140}
+              height={44}
+              priority
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}

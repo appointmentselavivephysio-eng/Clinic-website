@@ -70,12 +70,6 @@ export default function Hero() {
             />
           </h1>
 
-          {/* Understated SEO subtitle directly under the H1. */}
-          <p className="mt-2 text-sm text-muted">
-            Evidence-based physiotherapy clinic in Jaipur for spine, knee, sports
-            injuries and post-surgical rehabilitation.
-          </p>
-
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
             {HERO.subheading}
           </p>

@@ -5,19 +5,53 @@ import { VIDEO_SECTION } from "@/lib/data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import BlurText from "./BlurText";
 
-type VideoCard = { name: string; condition: string };
+type Video = { src: string; caption: string };
 
-// Real patient names/conditions from the testimonials data.
-const VIDEO_CARDS: VideoCard[] = [
-  { name: "Kavita Sharma", condition: "Slipped disc" },
-  { name: "Fenni Italia", condition: "Back pain" },
-  { name: "Ashok Kumar Sharma", condition: "Back pain" },
-  { name: "Preeti Saini", condition: "Cervical spine" },
-  { name: "Manju Agarwal", condition: "Knee pain" },
+const videos: Video[] = [
+  { src: "/images/V1.mp4", caption: "Spine therapy session — Elavive Physio, Jaipur" },
+  { src: "/images/V2.mp4", caption: "Manual therapy treatment — Elavive Physio, Jaipur" },
+  { src: "/images/V3.mp4", caption: "Back pain rehabilitation — Elavive Physio, Jaipur" },
+  { src: "/images/V4.mp4", caption: "Physiotherapy session — Elavive Physio, Jaipur" },
+  { src: "/images/V5.mp4", caption: "Knee treatment — Elavive Physio, Jaipur" },
+  { src: "/images/V6.mp4", caption: "Sports injury rehab — Elavive Physio, Jaipur" },
+  { src: "/images/V7.mp4", caption: "Neurological rehabilitation — Elavive Physio, Jaipur" },
 ];
 
-// Duplicate the 5 cards so the -50% marquee shift loops seamlessly (10 total).
-const LOOP_CARDS = [...VIDEO_CARDS, ...VIDEO_CARDS];
+// Duplicate the 7 videos so the -50% marquee shift loops seamlessly (14 total).
+const LOOP_VIDEOS = [...videos, ...videos];
+
+// Single portrait video card. `aria` hidden the duplicated marquee copies.
+function VideoCard({
+  video,
+  duplicate,
+}: {
+  video: Video;
+  duplicate?: boolean;
+}) {
+  return (
+    <li
+      className="w-[200px] shrink-0 sm:w-[260px]"
+      aria-hidden={duplicate ? true : undefined}
+    >
+      <figure className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-black shadow-soft">
+        <video
+          data-src={video.src}
+          preload="none"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        />
+        {/* Bottom gradient overlay for caption legibility. */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent" />
+        <figcaption className="absolute bottom-3 left-3 right-3 text-xs text-white">
+          {video.caption}
+        </figcaption>
+      </figure>
+    </li>
+  );
+}
 
 export default function VideoTestimonials() {
   const ref = useScrollReveal<HTMLDivElement>({
@@ -25,18 +59,19 @@ export default function VideoTestimonials() {
     stagger: 0.1,
   });
 
-  // Lazy-load the video source only when a card nears the viewport. Every
-  // <video> ships with preload="none" and its real source in data-src; on
-  // intersection we copy data-src → src (once) and stop observing that element.
-  // This keeps the initial page weight near zero instead of loading the same
-  // clip in all 10 marquee nodes (~43MB) up front.
+  // Lazy-load each clip only when its card nears the viewport. Every <video>
+  // ships with preload="none" and its real source in data-src; on intersection
+  // we copy data-src → src (once) and stop observing that element. This keeps
+  // the initial page weight near zero instead of loading all clips up front.
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const root = marqueeRef.current;
     if (!root) return;
 
-    const videos = Array.from(root.querySelectorAll<HTMLVideoElement>("video[data-src]"));
+    const vids = Array.from(
+      root.querySelectorAll<HTMLVideoElement>("video[data-src]")
+    );
 
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -54,7 +89,7 @@ export default function VideoTestimonials() {
       { rootMargin: "200px" }
     );
 
-    videos.forEach((video) => observer.observe(video));
+    vids.forEach((video) => observer.observe(video));
     return () => observer.disconnect();
   }, []);
 
@@ -75,11 +110,10 @@ export default function VideoTestimonials() {
       </div>
 
       {/*
-        Full-bleed marquee. The track holds a doubled list of cards and shifts
-        by -50% (one full copy) on a linear infinite loop, so the seam is
+        Full-bleed marquee. The track holds a doubled list of videos and shifts
+        by -50% (one full copy) on a 40s linear infinite loop, so the seam is
         invisible. Hovering the container pauses the scroll. Under
-        prefers-reduced-motion the site-wide CSS reset (globals.css) freezes the
-        animation, leaving a static row of cards.
+        prefers-reduced-motion we swap the marquee for a static 3-card row.
       */}
       <div
         ref={marqueeRef}
@@ -87,35 +121,21 @@ export default function VideoTestimonials() {
         className="group/marquee mt-2 w-full overflow-hidden"
         aria-label="Patient recovery videos"
       >
-        <ul className="flex w-max animate-marquee gap-4 sm:gap-5 [animation-duration:60s] group-hover/marquee:[animation-play-state:paused]">
-          {LOOP_CARDS.map((card, i) => (
-            <li
+        {/* Animated marquee (hidden when the user prefers reduced motion). */}
+        <ul className="flex w-max animate-marquee flex-row gap-4 [animation-duration:40s] group-hover/marquee:[animation-play-state:paused] motion-reduce:hidden">
+          {LOOP_VIDEOS.map((video, i) => (
+            <VideoCard
               key={i}
-              className="w-[220px] shrink-0 sm:w-[280px]"
-              aria-hidden={i >= VIDEO_CARDS.length ? true : undefined}
-            >
-              <figure className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-black shadow-soft">
-                <video
-                  data-src="/images/video.mp4"
-                  preload="none"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
-                {/* Bottom gradient overlay for caption legibility. */}
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 text-left">
-                  <p className="font-heading text-base font-medium leading-tight text-white">
-                    {card.name}
-                  </p>
-                  <p className="mt-0.5 text-sm text-white/80">
-                    {card.condition}
-                  </p>
-                </figcaption>
-              </figure>
-            </li>
+              video={video}
+              duplicate={i >= videos.length}
+            />
+          ))}
+        </ul>
+
+        {/* Static fallback: a plain 3-card row for reduced-motion users. */}
+        <ul className="hidden flex-row gap-4 motion-reduce:flex">
+          {videos.slice(0, 3).map((video, i) => (
+            <VideoCard key={i} video={video} />
           ))}
         </ul>
       </div>
