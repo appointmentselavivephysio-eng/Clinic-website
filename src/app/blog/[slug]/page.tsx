@@ -136,7 +136,7 @@ export default async function ArticlePage({
                 href="/contact#booking"
                 className="btn-primary mt-7 focus-visible:outline-white"
               >
-                Book an appointment
+                Book Your Appointment
                 <ArrowRight width={18} height={18} />
               </Link>
             </aside>

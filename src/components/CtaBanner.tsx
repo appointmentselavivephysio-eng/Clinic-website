@@ -22,7 +22,7 @@ interface CtaBannerProps {
 export default function CtaBanner({
   heading,
   subheading,
-  ctaLabel = "Book Appointment",
+  ctaLabel = "Book Your Appointment",
   ctaHref = "/contact#booking",
   showWhatsApp = true,
 }: CtaBannerProps) {

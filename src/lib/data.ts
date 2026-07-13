@@ -66,7 +66,7 @@ export const HERO = {
   headlineLine2: "Live fully.",
   subheading:
     "Advanced physiotherapy for spine, knee, sports injuries and post-surgical recovery, evidence-based treatment plans built around you.",
-  primaryCta: { label: "Book Appointment", href: "/contact#booking" },
+  primaryCta: { label: "Book Your Appointment", href: "/contact#booking" },
 };
 
 // --- TRUST BAR STATS ----------------------------------------------------------
@@ -592,6 +592,303 @@ export interface BlogArticle {
 export const BLOG_AUTHOR = "Dr. Ajay Agarwal (PT)";
 
 export const BLOG_ARTICLES: BlogArticle[] = [
+  {
+    slug: "sciatica-treatment-jaipur",
+    category: "Spine Health",
+    title: "Best Sciatica Physiotherapy Treatment in Jaipur",
+    excerpt:
+      "Sharp pain from lower back down your leg? Most sciatica cases resolve completely with physiotherapy. Here is how Elavive Physio treats sciatica without surgery.",
+    author: BLOG_AUTHOR,
+    readTime: "8 min read",
+    date: "2026-07-07",
+    metaTitle: "Sciatica Treatment in Jaipur | Elavive Physio",
+    metaDescription:
+      "Expert sciatica physiotherapy in Jaipur. Dr. Ajay Agarwal treats sciatic nerve pain with manual therapy, nerve mobilization and exercise. Book today.",
+    related: [
+      "back-pain-treatment-jaipur",
+      "knee-pain-physiotherapy-vs-surgery",
+      "frozen-shoulder-exercises-recovery",
+    ],
+    body: [
+      {
+        type: "paragraph",
+        content:
+          "Have you been experiencing a sharp pain that starts in your lower back and travels down your buttock into your leg? Does sitting for long hours, driving, or bending forward worsen the pain? You may be suffering from Sciatica — one of the most common causes of leg pain affecting millions of people worldwide.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "The good news is that most cases of sciatica can be successfully treated with physiotherapy, helping patients return to their normal lives without surgery. At Elavive Physio, Jaipur, we specialize in evidence-based physiotherapy treatments that target the root cause of sciatica rather than simply masking the pain.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "What is Sciatica?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Sciatica is not a disease itself but a condition caused by irritation, inflammation, or compression of the sciatic nerve — the largest nerve in the human body. The sciatic nerve begins in the lower spine, passes through the buttocks, and travels down the back of each leg to the feet. When this nerve becomes compressed or irritated, it causes pain, numbness, tingling, or weakness along its pathway.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Common Causes of Sciatica",
+      },
+      {
+        type: "list",
+        content: [
+          "Herniated (Slipped) Disc",
+          "Lumbar Disc Bulge",
+          "Degenerative Disc Disease",
+          "Spinal Stenosis",
+          "Piriformis Syndrome",
+          "Spondylolisthesis",
+          "Muscle Tightness",
+          "Poor Posture",
+          "Prolonged Sitting",
+          "Sports Injuries",
+          "Heavy Weight Lifting",
+          "Pregnancy",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Symptoms of Sciatica",
+      },
+      {
+        type: "list",
+        content: [
+          "Sharp pain radiating from the lower back to one leg",
+          "Burning sensation down the leg",
+          "Tingling or pins-and-needles",
+          "Numbness in the leg or foot",
+          "Muscle weakness",
+          "Pain while sitting",
+          "Difficulty standing up",
+          "Pain during coughing or sneezing",
+          "Reduced walking tolerance",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Who is at Risk?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Sciatica can affect anyone, but the risk is higher among office workers, IT professionals, drivers, factory workers, gym enthusiasts, athletes, older adults, people with obesity, and individuals who sit for more than 6 to 8 hours daily.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Can Physiotherapy Cure Sciatica?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For many patients, physiotherapy can completely resolve sciatica symptoms without surgery — particularly when treatment begins early and the condition is caused by mechanical problems such as a disc bulge, muscle imbalance, or poor posture. Physiotherapy works by addressing the underlying cause rather than simply reducing pain.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "At Elavive Physio, Dr. Ajay Agarwal is a Spine Care Specialist dedicated to helping patients overcome spine and musculoskeletal conditions without surgery whenever possible. His mission is to provide evidence-based, personalized physiotherapy treatments that relieve pain, restore mobility, and improve quality of life.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "How Physiotherapy Treats Sciatica",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "1. Detailed Physical Assessment",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Every patient undergoes a comprehensive evaluation including posture analysis, spine examination, movement assessment, muscle strength testing, nerve mobility assessment, and functional evaluation. This allows us to create a personalized treatment plan.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "2. Pain Relief Therapy",
+      },
+      {
+        type: "paragraph",
+        content:
+          "During the initial phase, treatment focuses on reducing pain using electrotherapy, TENS, IFT therapy, ultrasound therapy, heat therapy, and cold therapy. These modalities help decrease inflammation and relieve pain.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "3. Manual Therapy",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Hands-on treatment techniques improve spinal mobility, reduce joint stiffness, release muscle tightness, improve nerve movement, and reduce pressure on the sciatic nerve.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "4. Sciatic Nerve Mobilization",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Specialized nerve-gliding exercises improve the movement of the sciatic nerve and help reduce pain, tingling, and numbness.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "5. McKenzie Extension Therapy",
+      },
+      {
+        type: "paragraph",
+        content:
+          "For patients with disc-related sciatica, McKenzie exercises may help centralize pain and reduce pressure on the affected nerve.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "6. Core Strengthening Exercises",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Weak core muscles increase stress on the spine. A structured strengthening program targets abdominal muscles, lower back muscles, pelvic stabilizers, and gluteal muscles. A stronger core supports the spine and reduces the risk of recurrence.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "7. Stretching Program",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Tight muscles often contribute to sciatica. Physiotherapists prescribe stretches for hamstrings, piriformis, hip flexors, gluteal muscles, and lower back muscles.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "8. Posture Correction",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Poor posture is one of the biggest contributors to recurrent sciatica. Patients receive guidance on sitting posture, standing posture, sleeping position, lifting techniques, and ergonomic workstation setup.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "How Long Does Recovery Take?",
+      },
+      {
+        type: "list",
+        content: [
+          "Mild sciatica: 2 to 4 weeks",
+          "Moderate sciatica: 4 to 8 weeks",
+          "Chronic sciatica: 8 to 12 weeks or longer",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Patients who follow their exercise program consistently often recover more quickly and have a lower risk of recurrence.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Home Tips for Sciatica Relief",
+      },
+      {
+        type: "list",
+        content: [
+          "Avoid prolonged sitting",
+          "Walk regularly",
+          "Maintain good posture",
+          "Use lumbar support while sitting",
+          "Perform prescribed exercises daily",
+          "Avoid heavy lifting",
+          "Sleep on a supportive mattress",
+          "Maintain a healthy weight",
+        ],
+      },
+      {
+        type: "paragraph",
+        content:
+          "Always consult a qualified physiotherapist before starting exercises, as the wrong movements can aggravate symptoms.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "When Should You See a Physiotherapist?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Seek professional help if you experience leg pain lasting more than one week, tingling or numbness, difficulty walking, weakness in the leg or foot, recurrent sciatica, or pain that interferes with work or sleep. Seek urgent medical care if you develop loss of bladder or bowel control, numbness around the groin, or rapidly worsening leg weakness.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Why Choose Elavive Physio for Sciatica Treatment in Jaipur?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "At Elavive Physio, we focus on identifying and treating the root cause of sciatica using evidence-based physiotherapy. Our approach includes comprehensive assessment, personalized rehabilitation plans, advanced physiotherapy equipment, manual therapy, exercise-based rehabilitation, posture correction, and long-term prevention strategies.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        content: "Frequently Asked Questions",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "Can physiotherapy completely cure sciatica?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Many people recover fully with physiotherapy, especially when treatment starts early and the cause is mechanical. Some cases with severe nerve compression may also require medical or surgical treatment.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "Is walking good for sciatica?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Gentle walking is often beneficial, but it should be done within your comfort level and based on your physiotherapist's advice.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "Is surgery necessary for sciatica?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Most patients improve without surgery. Surgery is generally considered only when there is severe nerve compression, progressive weakness, or symptoms that do not improve with appropriate conservative treatment.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "Can sciatica come back?",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Yes, but maintaining good posture, staying active, and continuing your prescribed exercises can significantly reduce the risk of recurrence.",
+      },
+    ],
+  },
   {
     slug: "back-pain-treatment-jaipur",
     category: "Spine Health",

@@ -42,7 +42,7 @@ export default function NotFound() {
               Go Home
             </Link>
             <Link href="/contact#booking" className="btn-secondary">
-              Book Appointment
+              Book Your Appointment
             </Link>
           </div>
         </div>

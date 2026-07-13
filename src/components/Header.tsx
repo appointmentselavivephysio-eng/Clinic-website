@@ -79,7 +79,7 @@ export default function Header() {
               href="/contact#booking"
               className="btn-primary hidden !px-5 !py-3 sm:inline-flex"
             >
-              Book Appointment
+              Book Your Appointment
             </Link>
 
             {/* Hamburger */}
@@ -149,7 +149,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="btn-primary w-full"
             >
-              Book Appointment
+              Book Your Appointment
               <ArrowRight width={18} height={18} />
             </Link>
           </div>

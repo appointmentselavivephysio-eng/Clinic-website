@@ -110,7 +110,7 @@ export default function Footer() {
                   href="/contact#booking"
                   className="inline-flex py-2 transition-colors hover:text-teal"
                 >
-                  Book an appointment
+                  Book Your Appointment
                 </Link>
               </li>
             </ul>

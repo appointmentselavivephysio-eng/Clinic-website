@@ -8,13 +8,13 @@ import BlurText from "./BlurText";
 type Video = { src: string; caption: string };
 
 const videos: Video[] = [
-  { src: "/images/V1.mp4", caption: "Spine therapy session — Elavive Physio, Jaipur" },
-  { src: "/images/V2.mp4", caption: "Manual therapy treatment — Elavive Physio, Jaipur" },
-  { src: "/images/V3.mp4", caption: "Back pain rehabilitation — Elavive Physio, Jaipur" },
+  { src: "/images/V1.mp4", caption: "Chronic Low Back Pain Treatment" },
+  { src: "/images/V2.mp4", caption: "Sports Injury Rehab" },
+  { src: "/images/V3.mp4", caption: "Post Meniscus Injury Rehab" },
   { src: "/images/V4.mp4", caption: "Physiotherapy session — Elavive Physio, Jaipur" },
-  { src: "/images/V5.mp4", caption: "Knee treatment — Elavive Physio, Jaipur" },
-  { src: "/images/V6.mp4", caption: "Sports injury rehab — Elavive Physio, Jaipur" },
-  { src: "/images/V7.mp4", caption: "Neurological rehabilitation — Elavive Physio, Jaipur" },
+  { src: "/images/V5.mp4", caption: "Neck Pain Treatment with Mulligan Manual Therapy" },
+  { src: "/images/V6.mp4", caption: "PCL, Meniscus and Patellar Dislocation Rehab" },
+  { src: "/images/V7.mp4", caption: "Sciatica Pain Treatment" },
 ];
 
 // Duplicate the 7 videos so the -50% marquee shift loops seamlessly (14 total).

@@ -46,7 +46,7 @@ export default function AboutCTA() {
               href="/contact#booking"
               className="btn-primary focus-visible:outline-white"
             >
-              Book Appointment
+              Book Your Appointment
               <ArrowRight width={18} height={18} />
             </Link>
           </div>
