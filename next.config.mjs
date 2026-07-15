@@ -12,6 +12,26 @@ const nextConfig = {
   },
   // three.js ships ESM that transpiles cleanly; transpilePackages keeps R3F deps happy.
   transpilePackages: ["three"],
+  // 301 legacy .php URLs from the old site to their Next.js equivalents.
+  async redirects() {
+    return [
+      {
+        source: "/services.php",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/index.php",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/about.php",
+        destination: "/about",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
